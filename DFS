@@ -1,0 +1,9 @@
+visited=[False]*n #방문한 정보를 표시하는 visited 리스트를 
+
+def dfs(graph, v, visited):
+    visited[v]=True #현재 노드를 방문 처리
+    print(v,end=' ')
+    for i in graph[v]:
+        if not visited[i]:
+            dfs(grahp,i,visited)
+            
