@@ -1,3 +1,4 @@
+#DFS는 경우의 수를 구할 때 
 visited=[False]*n #방문한 정보를 표시하는 visited 리스트를 
 
 def dfs(graph, v, visited):
