@@ -13,7 +13,7 @@ for tc in range(int(input())):
              if i==n-1: left_down=0
              else: left_down=dp[i+1][j-1]
              left=dp[i][j-1]
-             dp[i][j]=array[i][j]+max(left_up,left,left_down)
+             dp[i][j]=dp[i][j]+max(left_up,left,left_down)
      result=0
      for i in range(n):
          result=max(result,dp[i][m-1])
