@@ -1,0 +1,14 @@
+#LIS 이용
+#전에 자기보다 작은게 있다면 1씩 증가시켜서 
+
+n=int(input())
+array=list(map(int,input()))
+array.reverse()
+dp=[0]*n
+
+for i in range(1,n):
+  for j in range(0,i):
+    if array[j]<array[i]:
+      dp[i]=max(dp[i],dp[j]+1)
+
+print(n-max(dp))
