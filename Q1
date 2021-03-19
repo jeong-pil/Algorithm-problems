@@ -1,0 +1,16 @@
+n=int(input())
+afraid_array=list(map(int,input().split()))
+afraid_array.sort()
+
+num_group=0
+count=0
+
+for i in afraid_array:
+  count+=1
+  if count<i:
+    continue
+  else:
+    num_group+=1
+    count=0
+
+print(num_group)
